@@ -1,20 +1,22 @@
 <template>
     <div class="backdrop" @click.self="closeModal">
-        <div class="modal" :class="{success:theme==='success', danger:theme==='delete'}" >
-            <h2>{{header}}</h2>
-            <p>{{content}}</p>
+        <div class="modal" :class="{success: theme === 'success', danger: theme === 'delete'}">
+        
+            <slot>
+            default
+            </slot>
 
-            <p>{{ theme }}</p>
+            <slot name="links"></slot>
 
         </div>
     </div>
-  
+
 </template>
 
 <script>
 export default {
 
-    props: ['header','content','theme'],
+    props: ['theme'],
     methods: {
         closeModal(){
             // alert("Hi")
@@ -47,11 +49,14 @@ p{
     /* color: rgb(30, 0, 255)!important; */
 }
 .success{
-    background-color: green;
+    background-color: rgba(212, 158, 21, 0.955);
     color: white  !important;;
 }
 .danger{
     background-color: crimson;
     color: wheat;
+}
+h3{
+    color: rgb(124, 228, 178);
 }
 </style>
