@@ -4,6 +4,8 @@
   <h3 style="color: antiquewhite;">I am studying VUE CLI now</h3><br>
   <h2 style="color: darkred;">{{ title }}</h2><br>
 
+  <h3>This is added for git push test</h3>
+
   <input id="ph" type="text" ref="name">
   <button @click="clickhandler">click</button>
   <BR></BR>
@@ -52,7 +54,7 @@ export default {
     return{
       // header: true,
       // content: "GOOD, you are fucking the same person",
-      theme: "success",
+      theme: "delete",
       showModal: false,
       showMyModal: false,
       title: "Hi - I am Title sentence"
