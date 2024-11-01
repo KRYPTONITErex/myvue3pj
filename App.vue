@@ -4,7 +4,7 @@
   <h3 style="color: antiquewhite;">I am studying VUE CLI now</h3><br>
   <h2 style="color: darkred;">{{ title }}</h2><br>
 
-  <h3>This is added for git push test</h3>
+  <h3>This is My New Modal</h3>
 
   <input id="ph" type="text" ref="name">
   <button @click="clickhandler">click</button>
@@ -26,21 +26,21 @@
   </div>
   <button @click="showModal=true">Open Modal</button>
 
-  <div class="Modals" v-if="showMyModal">
-    <Modal :theme="theme" 
+  <div class="MyModals" v-if="showMyModal">
+    <Modal theme="delete" 
     @closeModal="showMyModal=false">
 
-    <h2>LOGIN MY MODAL SUCCESS</h2>
-    <p>WELCOME USER BROS , HOW IS IT</p>
+    <h2>LOGOUT AND DELETE</h2>
+    <p>THANKS FOR USING OUR SERVICES</p>
 
     <template v-slot:links>
-      <a href="" style="color: antiquewhite;">Log IN</a>&nbsp;&nbsp;
-      <a href="" style="color: wheat;">Log OUT</a>
+      <a href="" style="color: antiquewhite;">Delete sure?</a>&nbsp;&nbsp;
+      <a href="" style="color: wheat;">Delere User</a>
     </template>
 
   </Modal>
   </div>
-  <button @click="showMyModal=true">Open My Modal ... </button>
+  <button @click="showMyModal=true">Delete...</button>
 
 
   
@@ -54,7 +54,7 @@ export default {
     return{
       // header: true,
       // content: "GOOD, you are fucking the same person",
-      theme: "delete",
+      theme: "success",
       showModal: false,
       showMyModal: false,
       title: "Hi - I am Title sentence"

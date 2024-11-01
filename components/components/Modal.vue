@@ -9,8 +9,10 @@
             <slot name="links"></slot>
 
         </div>
+
     </div>
 
+ 
 </template>
 
 <script>
@@ -59,4 +61,5 @@ p{
 h3{
     color: rgb(124, 228, 178);
 }
+
 </style>
